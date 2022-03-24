@@ -1,0 +1,7 @@
+def ex2():
+    import statistics
+    import requests
+    r = requests.get('https://raw.githubusercontent.com/dm-fedorov/python3_intro/master/lesson_10/temper.stat')
+    q = list(map(float, r.text.split()))
+    return max(q), min(q), statistics.mean(q)
+print(ex2())
