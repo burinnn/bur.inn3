@@ -1,0 +1,16 @@
+    a= int(input("Введите первое число: "))
+    b= int(input("Введите второе число: "))
+    c = input("Введите операцию: +, -, /: ")
+    if c == "+":
+        print(a+b)
+    elif c == "-":
+        print(a-b)
+    elif c == "/":
+        try:
+            print(a/b)
+        except ZeroDivisionError:
+            print("Ошибка деления на ноль")
+    else:
+        print("Неправильно введена операция")
+except ValueError:
+    print("Ошибка преобразования типов")
